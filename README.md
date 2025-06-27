@@ -14,7 +14,6 @@
 
 ## Instalación
 ```bash
-git clone https://github.com/tu-usuario/nombre-del-repo.git
-cd nombre-del-repo
+git clone https://github.com/santimontironi/useContext
 npm install
 npm run dev
