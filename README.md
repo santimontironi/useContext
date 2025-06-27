@@ -1,6 +1,6 @@
-### Proyecto useContext - React
+# Proyecto useContext - React
 
-# Este es un pequeño proyecto creado con el objetivo de practicar y entender el hook useContext de React.
+## Este es un pequeño proyecto creado con el objetivo de practicar y entender el hook useContext de React.
 
 ## ¿Qué se aprende en este proyecto?
 - Cómo crear un contexto en React.
