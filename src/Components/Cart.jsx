@@ -5,18 +5,19 @@ const Cart = () => {
 
     const {cartItems} = useContext(ProductsContext)
 
+    //se suma el total de los precios
+    const total = cartItems.reduce((acc, item) => acc + item.price, 0)
+
     return (
         <div className="cart">
             {cartItems.lenght === 0 ? (
                 <p>No hay productos agregados al carrito.</p>
             ) : (
-                <ul>
-                    {cartItems.map((item,index) => (
-                        <li key={index}>
-                            <span>{item.price}</span>
-                        </li>
-                    ))}
-                </ul>
+                <>
+                    <p>Precio total a pagar:</p>
+                    <p>${total}</p>
+                </>
+                
             )}
         </div>
     )

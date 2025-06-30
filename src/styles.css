@@ -12,6 +12,7 @@
     place-items: center;
     align-items: center;
     gap: 20px;
+    margin-top: 40px;
 }
 
 .card{
@@ -43,4 +44,17 @@
     align-items: center;
     width: 100%;
     justify-content: space-around;
+}
+
+.cart{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    border: solid 2px #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
 }
