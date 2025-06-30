@@ -1,15 +1,25 @@
+import { useContext } from "react"
+import ProductContext from "../Contexts/ProductContext"
+
 const Card = ({image,name,price}) => {
 
-  return (
-    <div className="card">
-        <img className="card-img" src={image} alt="imagen" />
-        <p className="product-name">{name}</p>
-        <div className="price-content">
-        <p className="price">${price}</p>
-            <button>Add to cart</button>
+    const {addToCart} = useContext(ProductContext)
+
+    const handleToCart = () => {
+        const product = {image,name,price}
+        addToCart(product)
+    }
+
+    return (
+        <div className="card">
+            <img className="card-img" src={image} alt="imagen" />
+            <p className="product-name">{name}</p>
+            <div className="price-content">
+            <p className="price">${price}</p>
+                <button onClick={handleToCart}>Add to cart</button>
+            </div>
         </div>
-    </div>
-  )
+    )
 }
 
 export default Card
