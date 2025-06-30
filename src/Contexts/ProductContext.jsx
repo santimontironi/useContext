@@ -1,6 +1,6 @@
 import { createContext, useState } from "react"
 
-const ProductsContext = createContext()
+export const ProductsContext = createContext()
 
 const ProductContext = ({children}) => {
 

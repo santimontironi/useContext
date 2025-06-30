@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import ProductContext from "../Contexts/ProductContext"
+import {ProductsContext} from "../Contexts/ProductContext"
 
 const Card = ({image,name,price}) => {
 
-    const {addToCart} = useContext(ProductContext)
+    const {addToCart} = useContext(ProductsContext)
 
     const handleToCart = () => {
         const product = {image,name,price}

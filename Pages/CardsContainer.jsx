@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import Card from "../src/Components/Card"
+import Cart from "../src/Components/Cart"
 
 const CardsContainer = () => {
 
@@ -12,7 +13,6 @@ const CardsContainer = () => {
                 const res = await fetch('https://api.escuelajs.co/api/v1/products')
                 const products = await res.json()
                 setProductsList(products)
-                console.log(products)
             }
             callApi()
         }
@@ -29,6 +29,8 @@ const CardsContainer = () => {
       ))}
 
       {wrong && <p>{wrong}</p>}
+
+      <Cart/>
     </div>
   )
 }
