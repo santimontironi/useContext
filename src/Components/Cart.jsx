@@ -3,7 +3,7 @@ import {ProductsContext} from "../Contexts/ProductContext"
 
 const Cart = () => {
 
-    const {cartItems} = useContext(ProductsContext)
+    const {cartItems, clearCart} = useContext(ProductsContext)
 
     //se suma el total de los precios
     const total = cartItems.reduce((acc, item) => acc + item.price, 0)
@@ -16,6 +16,7 @@ const Cart = () => {
                 <>
                     <p>Precio total a pagar:</p>
                     <p>${total}</p>
+                    <button onClick={clearCart}>Limpiar carrito</button>
                 </>
                 
             )}

@@ -11,8 +11,13 @@ const ProductContext = ({children}) => {
         setCartItems((prevItems) => [...prevItems,product])
     }
 
+    //funcion para limpiar carrito
+    const clearCart = () => {
+        setCartItems([])
+    }
+
     return (
-        <ProductsContext.Provider value={{cartItems,addToCart}}>
+        <ProductsContext.Provider value={{cartItems,addToCart, clearCart}}>
             {children}
         </ProductsContext.Provider>
     )
