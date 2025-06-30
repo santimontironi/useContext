@@ -10,9 +10,10 @@ const CardsContainer = () => {
     useEffect(() => {
         try{
             async function callApi(){
-                const res = await fetch('https://api.escuelajs.co/api/v1/products')
+                const res = await fetch('https://fakestoreapi.com/products')
                 const products = await res.json()
                 setProductsList(products)
+                console.log(products)
             }
             callApi()
         }
@@ -25,7 +26,7 @@ const CardsContainer = () => {
   return (
     <div className="cardContainer">
       {productsList.map((product) => (
-        <Card key={product.id} image={product.category.image} name={product.category.title} price={product.price}/>
+        <Card key={product.id} image={product.image} name={product.category.title} price={product.price}/>
       ))}
 
       {wrong && <p>{wrong}</p>}
