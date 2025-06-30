@@ -1,4 +1,4 @@
-import CardsContainer from "./Components/CardsContainer"
+import CardsContainer from "../Pages/CardsContainer"
 
 function App() {
 
